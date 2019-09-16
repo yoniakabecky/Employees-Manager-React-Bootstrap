@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { EmployeesContext } from '../contexts/EmployeesContext';
 import axios from 'axios';
 
-export const API_URL = "http://calm-taiga-51580.herokuapp.com/api/employees";
+export const API_URL = "https://employee-maneger-node.herokuapp.com/api/employees";
 // export const API_URL = "http://localhost:5000/api/employees";
 
 export const useFetch = () => {
