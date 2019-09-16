@@ -1,11 +1,3 @@
-export const headerContents = [
-  { id: "name", label: "Name" },
-  { id: "email", label: "Email" },
-  { id: "address", label: "Address" },
-  { id: "phone", label: "Phone" },
-  { id: "action", label: "Actions" }
-];
-
 export const initialData = [
   {
     name: "Tom",
