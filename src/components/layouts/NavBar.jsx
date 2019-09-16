@@ -3,7 +3,7 @@ import { Navbar, Button, Container, Form } from 'react-bootstrap';
 import { ModalContext } from '../../contexts/ModalContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import './nabBar.scss';
+import './nabBar.css';
 
 const NavBar = () => {
   const { openAddModal } = useContext(ModalContext);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table, Container, Form } from 'react-bootstrap';
 import FetchEmployees from './FetchEmployees';
-import './employees.scss';
+import './employees.css';
 
 
 const Employees = () => {

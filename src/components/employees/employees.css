@@ -2,8 +2,5 @@
   background-color: transparent;
   border: none;
 
-  &:focus {
-    outline: 0;
-  }
 }
 
