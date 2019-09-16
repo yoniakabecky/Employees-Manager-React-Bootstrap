@@ -10,7 +10,7 @@ const Employees = () => {
       <Table striped hover>
         <thead>
           <tr>
-            <th><Form.Check /></th>
+            <th><Form.Check onClick={(e) => console.log(e)} /></th>
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>

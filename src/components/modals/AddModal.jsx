@@ -7,6 +7,7 @@ import { postData } from '../../store/useFetch';
 const AddModal = () => {
   const { addModal, closeAddModal } = useContext(ModalContext);
 
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
