@@ -13,15 +13,12 @@ const FetchEmployees = () => {
 
   React.useEffect(() => {
     getData().then(d => setData(d));
-
     return () => { };
   }, []);
 
   async function onDeleteButtonClick(e, employee) {
     await deleteData(employee);
-
     const employees = await getData();
-
     setData(employees);
   }
 
@@ -39,8 +36,7 @@ const FetchEmployees = () => {
             <button className="actionBtn text-danger" onClick={e => onDeleteButtonClick(e, employee)}><FontAwesomeIcon icon={faTrash} /></button>
           </td>
         </tr>
-      ))
-      }
+      ))}
     </tbody >
   );
 }

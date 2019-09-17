@@ -20,7 +20,6 @@ const Employees = () => {
         </thead>
         <FetchEmployees />
       </Table>
-
     </Container>
   );
 }
