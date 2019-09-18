@@ -8,7 +8,7 @@ export const getData = async () => {
   try {
     response = await axios(API_URL)
   } catch (error) {
-    console.log('add modal err', error)
+    console.log('failed to get employees:', error)
     return
   }
   return response.data;
@@ -18,16 +18,16 @@ export const postData = async (newEmployee) => {
   try {
     await axios.post(API_URL, newEmployee)
   } catch (error) {
-    console.log('add modal err', error)
+    console.log('failed to add an employee:', error)
     return
   }
 }
 
 export const putData = (employeeData) =>
   axios.put(API_URL, employeeData)
-    .catch(err => console.log('edit modal err', err))
+    .catch(err => console.log('failed to edit an employee:', err))
 
 
 export const deleteData = (employee) =>
   axios.delete(API_URL + `/${employee._id}`)
-    .catch(err => console.log(err))
+    .catch(err => console.log('failed to delete employees:', err))

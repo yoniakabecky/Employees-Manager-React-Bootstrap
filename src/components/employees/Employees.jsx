@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table, Container, Form } from 'react-bootstrap';
-import FetchEmployees from './FetchEmployees';
+import DisplayEmployees from './DisplayEmployees';
 import './employees.css';
 
 
-const Employees = () => {
+const Employees = ({ employees, deleteEmployee, deleteFewEmployees, selectedEmployees }) => {
+  const [allCheck, setAllCheck] = useState(false);
+
   return (
     <Container >
       <Table striped hover>
         <thead>
           <tr>
-            <th><Form.Check onClick={(e) => console.log(e)} /></th>
+            <th><Form.Check onChange={(e) => setAllCheck(e.target.checked)} /></th>
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>
@@ -18,7 +20,13 @@ const Employees = () => {
             <th>Action</th>
           </tr>
         </thead>
-        <FetchEmployees />
+        <DisplayEmployees
+          check={allCheck}
+          employees={employees}
+          deleteEmployee={deleteEmployee}
+          deleteFewEmployees={deleteFewEmployees}
+          selectedEmployees={selectedEmployees}
+        />
       </Table>
     </Container>
   );

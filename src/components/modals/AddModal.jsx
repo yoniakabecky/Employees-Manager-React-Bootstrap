@@ -1,12 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import { ModalContext } from '../../contexts/ModalContext';
-import { postData } from '../../store/useFetch';
 
 
-const AddModal = () => {
+const AddModal = ({ employees, addEmployee }) => {
   const { addModal, closeAddModal } = useContext(ModalContext);
-
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -38,10 +36,11 @@ const AddModal = () => {
       name,
       email,
       address,
-      phone
+      phone,
+      checked: false,
     }
 
-    postData(newEmployee);
+    addEmployee(newEmployee);
   };
 
 

@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import { ModalContext } from '../../contexts/ModalContext';
-import { putData } from '../../store/useFetch';
 
 
-const EditModal = () => {
+const EditModal = ({ employees, handleEditEmployee }) => {
   const { editModal, closeEditModal, editEmployee } = useContext(ModalContext);
 
   const [name, setName] = useState("");
@@ -39,9 +38,10 @@ const EditModal = () => {
       email: email !== "" ? email : editEmployee.email,
       address: address !== "" ? address : editEmployee.address,
       phone: phone !== "" ? phone : editEmployee.phone,
+      checked: false,
     }
 
-    putData(employeeData);
+    handleEditEmployee(employeeData);
   };
 
 

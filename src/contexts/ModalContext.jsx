@@ -20,6 +20,7 @@ const ModalContextProvider = (props) => {
 
   const closeEditModal = () => setEditModal(false);
 
+
   return (
     <ModalContext.Provider
       value={{ addModal, editModal, editEmployee, openAddModal, openEditModal, closeAddModal, closeEditModal }}>

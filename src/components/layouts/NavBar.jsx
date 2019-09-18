@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import './nabBar.css';
 
-const NavBar = () => {
+const NavBar = ({ employees, checkedEmployees }) => {
   const { openAddModal } = useContext(ModalContext);
 
   return (
@@ -13,7 +13,12 @@ const NavBar = () => {
       <Container>
         <Navbar.Brand>Manage <strong>Employees</strong></Navbar.Brand>
         <Form inline>
-          <Button variant="danger" className="navBtn" onClick={() => console.log('delete clicked')}>
+          <Button
+            variant="danger"
+            className="navBtn"
+            onClick={() => console.log('delete clicked')}
+            disabled={checkedEmployees !== ""}
+          >
             <FontAwesomeIcon icon={faMinusCircle} className="circle-icons" />
             Delete
             </Button>
