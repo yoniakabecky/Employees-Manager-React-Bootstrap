@@ -5,4 +5,4 @@ https://employee-manager-bootstrap.herokuapp.com/
    
    
 Back-end side repository link is below   
-https://github.com/yoniakabecky/Employees-Maneger-Node
+https://github.com/yoniakabecky/Employees-Manager-Node
